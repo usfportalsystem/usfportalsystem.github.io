@@ -1,0 +1,16 @@
+$(document).ready(function(){
+
+  $('#username').focus();
+
+  //Show NetID error message
+  $('#username').netid_check(function(result){
+    if (result) {
+      $('#errors').html('<div id="InvalidNetID" class="alert alert-warning fade in">'+
+                        '<button type="button" class="close" data-dismiss="alert">&times;</button>'+
+                        'Invalid NetID format'+
+                        '<a href="#NetIDFormatModal" role="button" class="btn btn-mini" data-toggle="modal" style="float: right;">more info</a>'+
+                        '</div>'
+                      );
+    }
+  });
+});

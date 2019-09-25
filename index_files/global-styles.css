@@ -1,0 +1,535 @@
+/*  ==========================================================================
+	Master stylesheet for USF Enterprise CMS
+	Author: USF University Communications and Marketing
+	Author URL: http://www.usf.edu/ucm/
+    ==========================================================================  */
+
+/*  ==========================================================================
+	Reset CSS
+	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+    ==========================================================================  */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-text-size-adjust: none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-size: .813em; 
+	line-height: 1.5;
+	font-family: Arial, sans-serif;
+	color: #666;
+}
+ul, ol {
+	margin: 0 0 1.5em 25px;
+}
+ul ul, ul ol, ol ol, ol ul {
+	margin-bottom: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input {
+	font-size: 1em;
+	border: 0;
+}
+a:link, a:visited {
+	font-weight: bold;
+	color: #057b56;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	text-decoration: none;
+	color: #7fb539;
+}
+p {
+	margin-bottom: 1.5em;
+}
+
+
+/*  ==========================================================================
+	Global Elements
+    ==========================================================================  */
+   
+.container:before, .container:after {
+    content:"";
+    display:table;
+}
+.container:after {
+    clear:both;
+}
+.container {
+    *zoom:1;
+}
+.main-navigation ul, .footer-navigation ul {
+	margin: 0;
+	list-style: none;
+}
+
+
+/* 	Accessibility
+    ==========================================================================  */
+	
+a.skip-link, a.skip-link:hover, a.skip-link:visited, .hidden {
+	width:1px;
+	height:1px;
+	position:absolute;
+	left:-9999px;
+	top:auto;
+	overflow:hidden;
+}
+a.skip-link:active, a.skip-link:focus {
+	width:auto;
+	height:auto;
+	position:static; 
+}
+
+
+/* 	Header
+    ==========================================================================  */
+   
+header {
+	background: #f1edbe url("../images/header/banner/banner.jpg") no-repeat center top;
+	overflow: hidden;
+}
+
+
+/* 	Logo Bar
+    ==========================================================================  */   
+.top-bar-wrapper {
+	background: #12825f url("../images/header/top-bar/top-bar.jpg") repeat-x;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0c6a4d), to(#12825f));
+   	background-image: -webkit-linear-gradient(top, #0c6a4d, #12825f);
+   	background-image:    -moz-linear-gradient(top, #0c6a4d, #12825f);
+   	background-image:     -ms-linear-gradient(top, #0c6a4d, #12825f);
+   	background-image:      -o-linear-gradient(top, #0c6a4d, #12825f);
+}
+.top-bar .skip-link {
+	float: left;
+	color: #fff;
+}
+.top-bar-logo {
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	clear:both;
+	color: #fff;
+}
+.top-bar-logo img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	vertical-align: middle;
+}
+.top-bar-nav-wrapper {
+	padding-bottom: 1.5em;
+	background-color: #fff; /* Hide the sun and globe background-image */
+}
+.top-bar-nav {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	font-size: .9em;
+}
+.top-bar-item {
+	margin-left: .476em;
+	float: left;
+}
+.top-bar-search {
+	width: 98%;
+	margin: 0 0 .75em 0;
+	padding: .25em;
+	background-color: #fff;
+	display: block; /* show the actual search box ... */
+	position: relative;
+	border: 1px solid #1d8d6a;
+}
+#top-bar-search-input {
+	width: 100px;
+	border: none;
+	color: #314942;
+}
+#top-bar-search-button {
+	width: 14px; 
+    height: 14px;
+    position: absolute;
+    top: 5px; 
+	right: 5px;
+}
+.top-bar-search + a.top-bar-item {
+	margin-left: 0;
+	padding-left: 0;
+	border-left: 0;
+}
+a.top-bar-item, a.top-bar-item:visited {
+	margin-top: .6em;
+	padding-left: .476em;
+	border-left: 1px solid #057b56;
+	font-weight: normal;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+a.top-bar-item:first-child {
+	margin-left: 0;
+}
+.top-bar-weather {
+	margin-left: .952em;
+}
+.top-bar-weather a {
+	display: block;
+	font-weight: normal;
+}
+.top-bar-weather .wx-current-icon {
+	float: left;
+	margin-right: .5em;
+	width: 23px;
+	height: 23px;
+}
+.top-bar-weather .wx-temperature {
+	float: left;
+	margin: .6em 0 0 0;
+	line-height: 1em;
+}
+
+
+/* 	Banner
+    ==========================================================================  */
+
+.banner {
+	width: 90%;
+	margin: 0 auto;
+	padding: 1.5em 0;
+}
+.banner-title {
+	width: 75%;
+	margin-bottom: .115em;
+	font: 2em Garamond, "Times New Roman", serif;
+}
+.banner-subtitle {
+	margin-bottom: 0;
+	letter-spacing: 2px;
+}
+.banner-title a, .banner-subtitle a {
+	color: #057b56;
+	font-weight: normal;
+}
+.banner-subtitle a {
+	text-transform: uppercase;
+}
+.banner-logo-link {
+	max-width: 316px;
+	display: block;
+}
+.banner-logo {
+	width: 100%;
+	vertical-align: middle;
+}
+
+
+/* 	Navigation
+    ==========================================================================  */
+   
+.main-navigation {
+	padding-bottom: 1.5em;
+	background-color: #fff;
+	z-index: 1;
+}
+.main-navigation ul {
+	width: 100%;
+	background: #138360 url("../images/header/main-navigation/main-navigation.jpg") repeat-x;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#23a079), to(#0f7254));
+   	background-image: -webkit-linear-gradient(top, #23a079, #0f7254);
+   	background-image:    -moz-linear-gradient(top, #23a079, #0f7254);
+   	background-image:     -ms-linear-gradient(top, #23a079, #0f7254);
+   	background-image:      -o-linear-gradient(top, #23a079, #0f7254);
+}
+.main-navigation li {
+	width: 49.9%;
+	float: left;
+	text-align: center;
+	border-bottom: 1px solid #166c51; 
+	-moz-box-shadow:    0px 1px 0px #3ea485;
+  	-webkit-box-shadow: 0px 1px 0px #3ea485;
+  	box-shadow:         0px 1px 0px #3ea485;
+}
+.main-navigation a, .main-navigation a:visited {
+	padding: .75em 0;
+	color: #fff;
+	display: block;
+	border-left: 1px solid #3ea485; 
+	-moz-box-shadow:    -1px 0px 0px #166c51;
+  	-webkit-box-shadow: -1px 0px 0px #166c51;
+  	box-shadow:         -1px 0px 0px #166c51; /* dark border then light boxshadow */
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: .9em;
+	font-weight: normal;
+}
+.main-navigation .main-nav-five {
+	border-bottom: 1px solid #3ea485;
+}
+.main-navigation .main-nav-five a, .main-navigation .main-nav-five a:visited {
+	border-right: 1px solid #166c51;
+	border-left: none;
+	-moz-box-shadow:    1px 0px 0px #3ea485;
+  	-webkit-box-shadow: 1px 0px 0px #3ea485;
+  	box-shadow:         1px 0px 0px #3ea485; /*dark boxshadow then light border to provide line for empty spot */
+}
+.main-navigation a:hover, .main-navigation a:active, .main-navigation a:focus {
+	background: url("../images/header/main-navigation/main-navigation-rollover.png") no-repeat center center;
+}
+
+
+/* 	Content
+    ==========================================================================  */
+#content {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+
+/* 	Footer
+    ==========================================================================  */
+   
+#footer {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 3em 0;
+	border-top: 1px solid #dcddde; 
+}
+.footer-usf-logo {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	margin-bottom: 1.5em;
+}
+.footer-navigation a {
+	font-weight: normal;
+}
+.footer-navigation ul {
+	width: 30%;
+	float: left;
+	margin: 0 3% 1.5em 0;
+}
+.footer-navigation li {
+	margin-bottom: .5em;
+}
+#ou-access {
+	color: #666;
+}
+
+
+/* 	==========================================================================
+   	Media Queries
+    ==========================================================================  */
+
+@media screen and (min-width: 515px) {
+	
+/* 	Logo Bar
+    ==========================================================================  */		
+.top-bar-search {
+	width: 130px;
+	margin: 0 1em 0 0;	
+   right: 5px;
+}
+
+/* 	Banner
+    ==========================================================================  */	
+.banner {
+	padding: 2em 0;
+}
+.banner-title {
+	width: 60%;
+	font: 2.308em Garamond, "Times New Roman", serif;
+}
+}
+
+@media screen and (min-width: 750px) {
+	
+/* 	Logo Bar
+    ==========================================================================  */	
+.top-bar-logo {
+	width: auto;
+	float: left;
+	text-align: left;
+}
+.top-bar {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto;
+	background: url("../images/header/top-bar/top-bar-glow.jpg") no-repeat left top;
+}
+
+
+/* 	Banner
+    ==========================================================================  */	
+.banner {
+	padding: 3em 0;
+}
+.banner-title {
+	width: 50%;
+}
+
+
+/* 	Navigation
+    ==========================================================================  */
+.main-navigation li {
+	width: 33.3%;
+}
+.main-navigation .main-nav-four li {
+	width: 50%;
+}
+
+
+/* 	Footer
+    ==========================================================================  */
+.footer-info {
+	width: 45%;
+	float: left;
+}
+.footer-navigation {
+	width: 45%;
+	float: right;
+}
+}
+
+@media screen and (min-width: 1000px) {
+	
+/* 	Header and Banner
+    ==========================================================================  */	
+.inside-header {
+	width: 90%;
+	max-width: 1000px;
+	position: relative; /* accommodate the move of the top-bar-nav */
+	margin: 0 auto;
+}
+.banner {
+	width: auto;
+}
+.banner-title {
+	width: 70%;
+	margin-left: 0;
+	font-size: 3em;
+}
+
+
+/* 	Logo Bar
+    ==========================================================================  */
+.top-bar-nav-wrapper {
+	position: absolute;
+	top: -33px;
+	right: 0;
+	background-color: transparent; /* visually move the top-bar-nav up to the top-bar */
+}
+.top-bar-nav {
+	width: auto;
+	float: right;
+	margin-top: 0;
+}
+a.top-bar-item, .top-bar-weather a {
+	color: #fff;
+}
+a.top-bar-item, a.top-bar-item:visited {
+	border-color: #fff;	
+	font-weight: normal;	
+}
+
+
+/* 	Navigation
+    ==========================================================================  */
+.main-navigation {
+	padding-bottom: 0;
+	background-color: transparent;
+}
+.main-navigation ul {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: #006747;
+	-moz-border-radius: 10px 10px 0px 0;
+	-webkit-border-radius: 10px 10px 0px 0;
+	border-radius: 10px 10px 0px 0;
+	-moz-box-shadow:    0px 1px 10px rgba(0, 0, 0, .35);
+  	-webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, .35);
+  	box-shadow:         0px 1px 10px rgba(0, 0, 0, .35);
+}
+.main-navigation li {
+	width: 16.5%;
+	border-bottom: none;
+	-moz-box-shadow:    none;
+  	-webkit-box-shadow: none;
+  	box-shadow:         none;
+}
+.main-navigation .main-nav-five li {
+	width: 20%;
+}
+.main-navigation .main-nav-four li {
+	width: 25%;
+}
+.main-navigation a, .main-navigation .main-nav-five a {
+	border-left: 1px solid #3ea485;
+	border-right: none;
+	-moz-box-shadow:    -1px 0px 0px #166c51;
+  	-webkit-box-shadow: -1px 0px 0px #166c51;
+  	box-shadow:         -1px 0px 0px #166c51;
+}
+.main-navigation li:first-child a {
+	-moz-box-shadow:    none;
+  	-webkit-box-shadow: none;
+  	box-shadow:         none;
+	border-left: none;
+	margin-left: -1px;
+}
+.main-navigation .main-nav-five {
+	border-bottom: none;
+}
+
+
+/* 	Content
+    ==========================================================================  */
+#content {
+	padding-top: 1.5em;
+}
+
+}
+
+
+/* 	==========================================================================
+   	IE FIXES
+    ==========================================================================  */
+	
+.no-js.lt-ie9 .top-bar-logo img, .no-js.lt-ie9 .news-widget-thumbnail, .no-js.lt-ie9 .footer-usf-logo {
+	width: auto;
+}
+.no-js.lt-ie9 .main-nav-four, .no-js.lt-ie9 .main-nav-five, .no-js.lt-ie9 .main-nav-six, .no-js.lt-ie9 .footer-info {
+	width: 90%;
+	margin: 0 auto;
+}

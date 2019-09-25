@@ -1,0 +1,19 @@
+.main-navigation {
+  display: none;
+}
+
+.top-bar-nav-wrapper {
+  display: none;
+}
+
+.page-title-plain-text {
+  display: none;
+}
+
+.application-control {
+  margin-top: 20px;
+}
+
+.application-heading {
+  font-size: 1.33em;
+}

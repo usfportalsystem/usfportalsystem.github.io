@@ -1,0 +1,41 @@
+/**
+* Sets up a keypress listener on the selected elements that can be used to
+* alert users that they are entering an invalid NetID.
+* 
+* NetID Validation:
+* First 3 positions: Alpha (upper/lower) and dash (-) ONLY
+* All other positions: Alphanumeric (upper/lower/digit), at symbol (@), period(.), and dash (-)
+*
+* @param   Function    cb      The callback function to call
+* @return  jQuery              The jQuery object
+* @public
+*/
+jQuery.fn.netid_check = function(cb){
+  return this.keyup(function(e){
+    if (this.value === "") {
+      cb.call(this, 0);
+      return;
+    }
+    if (this.value.length < 4) {
+      if(this.value.match(/^([Uu][0-9]).*$/)) {
+        cb.call(this,'UNUMBER');
+        console.log('UNUMBER');
+        return;
+      } else if ((! this.value.match(/^([a-zA-Z\-]+)$/)) && (this.value !== '')) {
+          cb.call(this, 1);
+          return;
+        } else {
+          cb.call(this, 0);
+        return;
+      }
+    } else {
+      if (! this.value.match(/^([a-zA-Z\-][a-zA-Z\-][a-zA-Z\-][a-zA-Z0-9\-@\.]+$)/)) {
+        cb.call(this, 1);
+        return;
+      } else {
+        cb.call(this, 0);
+        return;
+      }
+    }
+  });
+};

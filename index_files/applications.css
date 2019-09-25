@@ -1,0 +1,295 @@
+/*  ==========================================================================
+	Applications page stylesheet for USF Enterprise CMS
+	Author: USF University Communications and Marketing
+	Author URL: http://www.usf.edu/ucm/
+    ==========================================================================  */
+
+
+/*  ==========================================================================
+	Collapsing
+    ==========================================================================  */
+	
+.collapsible-heading-status {
+	width:1px;
+	height:1px;
+	position:absolute;
+	left:-99999px;
+	top: auto;
+	overflow:hidden;
+}
+.collapsible-content-collapsed {
+	display:none;
+}
+
+
+/*  ==========================================================================
+	Page Title
+    ==========================================================================  */
+.page-title-plain-text {
+	margin-bottom: 1em;
+	padding-bottom: .25em;
+	border-bottom: 1px solid #dcddde;
+	color: #057b56;
+	font: 3em/1em Garamond, "Times New Roman", serif;
+}
+
+
+/*  ==========================================================================
+	Applications
+    ==========================================================================  */ 
+.application {
+	margin-bottom: 1.5em;
+}
+.application-text:first-child, .application-control:first-child {
+	margin-bottom: 3em;
+}
+
+/* 	Application Text
+    ==========================================================================  */	
+.application-text ul li {
+	margin-top: 1.5em;
+}  
+.application-text ul li:first-child {
+	margin-top: 0;
+}    
+
+/* 	Application Form
+    ==========================================================================  */	
+.application-control {
+	margin-bottom: 1.5em;
+	padding: 2em 2.5em;
+	background: #e6e7e8 url("../images/grey-gradient.jpg") repeat-x;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e6e7e8));
+   	background-image: -webkit-linear-gradient(top, #fff, #e6e7e8);
+   	background-image:    -moz-linear-gradient(top, #fff, #e6e7e8);
+   	background-image:     -ms-linear-gradient(top, #fff, #e6e7e8);
+   	background-image:      -o-linear-gradient(top, #fff, #e6e7e8);
+	border: 1px solid #d1d3d4;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow:    0px 1px 10px rgba(0, 0, 0, .20);
+  	-webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, .20);
+  	box-shadow:         0px 1px 10px rgba(0, 0, 0, .20);
+}
+.application-heading {
+	margin-bottom: .95em;
+	color: #057B56;
+	font: bold 1.538em/1.5 Arial, sans-serif;
+}
+.application-signon {
+	width: 100%;
+	margin-bottom: 1.5em;
+}
+.application-signon input {
+	display: block;
+}
+.application-field {
+	width: 97%;
+	margin-bottom: 1.5em;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+.application-checkboxes {
+	clear: both;
+}
+.application-checkbox {
+	margin-right: .75em;
+	float: left;
+}
+.application-select {
+	margin-bottom: .375em;
+}
+.application-select label {
+	float: left;
+	width: 100px;
+}
+.application-select select {
+	width: 50%;
+}
+.application-btn {
+	padding: .25em 0;
+	background: #138360 url("../images/button.jpg") repeat-x;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#23a079), to(#0f7254));
+   	background-image: -webkit-linear-gradient(top, #23a079, #0f7254);
+   	background-image:    -moz-linear-gradient(top, #23a079, #0f7254);
+   	background-image:     -ms-linear-gradient(top, #23a079, #0f7254);
+   	background-image:      -o-linear-gradient(top, #23a079, #0f7254);
+   	border: 1px solid #1d8d6a;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.231em;
+	font-weight: bold;
+}
+.signin-btn {
+	width: 145px;
+}
+.search-btn {
+	width: 100px;
+	margin-bottom: 1em;
+	float: left;
+}
+.application-policy {
+	margin-bottom: 0;
+	clear: both;
+}
+.search-links {
+	clear: both;
+}
+.techfee {
+	margin-top: -1.5em;
+}
+
+
+/*  ==========================================================================
+	Application Results
+    ==========================================================================  */
+.application-results {
+	clear: both;
+}
+.application-results-title {
+	padding-bottom: .25em;
+	margin-bottom: .95em;
+	border-bottom: 1px solid #dcddde;
+	font-size: 1.538em;
+	font-weight: bold;
+}
+.application-results-table {
+ 	width: 100%;
+ 	margin-bottom: 3em;
+ 	border-collapse: collapse;
+ }
+ .application-results-table tr {
+	background-color: #fff;
+}
+.application-results-table thead, .application-results-table thead th {
+	background-color: #fff;
+	font-weight: bold;
+ }
+.application-results-table tr:nth-of-type(odd){
+	background-color: #eceded;
+}
+.application-results-table tr.odd {
+	background-color: #eceded;
+}
+.application-results-table td, .application-results-table th {
+	padding: 10px;
+	border: 2px solid #fff;
+	text-align: left;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.application-results-table tr:nth-of-type(odd) td {
+	border-color: #fff;
+}
+
+
+
+/*  ==========================================================================
+	Media Queries
+    ==========================================================================  */
+
+@media screen and (max-width: 875px) {
+
+/* 	Applications
+    ==========================================================================  */
+.application-results-table, .application-results-table thead, .application-results-table tbody, .application-results-table th, .application-results-table td, .application-results-table tr { 
+		display: block; 
+}    
+.application-results-table thead, .application-results-table thead th {
+ 	width:1px;
+	height:1px;
+	position:absolute;
+	left:-9999px;
+	top:auto;
+	overflow:hidden;
+}
+.application-results-table tr:before, .application-results-table tr:after {
+    content:"";
+    display:table;
+}
+.application-results-table tr:after {
+    clear:both;
+}
+.application-results-table tr {
+    *zoom:1;
+}
+.application-results-table tr:nth-of-type(odd) td, .application-results-table tr:nth-of-type(odd) th {
+	border-color: #fff;
+}
+.application-results-table td, .application-results-table tbody th {
+	width: 100%;
+	padding-left: 50%;
+	border: none;
+	border-bottom: 1px solid #eceded;
+	text-align: left;
+	float: left;
+	position: relative;
+}
+.application-results-table td:before, .application-results-table th:before {
+    content: attr(data-label);
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 45%;
+    font-weight: bold;
+}
+.url {
+	-ms-word-break: break-all;
+     word-break: break-all;
+     word-break: break-word;
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+        hyphens: auto;
+}
+}
+
+@media screen and (min-width: 550px) {
+
+/* 	Applications
+    ==========================================================================  */	
+.application-text, .application-control {
+	width: 41.5%;
+	float: left;
+}
+.application-control {
+	float: right;
+}
+}
+
+@media screen and (min-width: 1000px) {
+
+/* 	Page Title
+    ==========================================================================  */	
+.page-title-plain-text {
+	padding-top: .5em;
+}
+
+/* 	Application Form
+    ==========================================================================  */
+ .application-signon {
+	width: 70%;
+	float: left;
+}	
+.search-btn {
+	margin-right: 1.5em;
+}
+.application-checkboxes {
+	margin-top: 0.308em;
+	clear: none;
+}
+.techfee {
+	width: 92px;
+	height: 91px;
+	float: right;
+	background: url("../images/techfee-sticker.png") no-repeat;
+	overflow:hidden;
+	text-align: left;
+	text-indent: -99999px;
+}    
+}
